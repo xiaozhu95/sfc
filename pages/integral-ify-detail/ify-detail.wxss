@@ -1,0 +1,225 @@
+.header {
+  height: 290rpx;
+}
+
+.header image {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.introduce {
+  background-color: #fff;
+  padding: 0 9px;
+}
+
+.logo {
+  width: 170rpx;
+  height: 180rpx;
+  /* border: 1px solid red; */
+  position: absolute;
+  top: 212rpx;
+}
+
+.logo image {
+  width: 100%;
+  height: 100%;
+}
+
+.store_name {
+  padding: 20rpx 0 0 20rpx;
+  font-size: 30rpx;
+}
+
+.intro, .store_name {
+  background-color: #fff;
+}
+
+.describe {
+  margin: 20rpx;
+  color: #999;
+  height: 40rpx;
+  overflow: hidden;
+}
+
+.showWord {
+  margin: 20rpx;
+  color: #999;
+}
+
+.check {
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.check image {
+  width: 15rpx;
+  height: 15rpx;
+}
+
+.cart {
+  margin-top: 20rpx;
+}
+
+/* 单张start */
+
+.sola {
+  padding: 0 26rpx;
+  position: relative;
+  margin-bottom: 40rpx;
+}
+
+.sola image {
+  width: 698rpx;
+  height: 287rpx;
+  position: absolute;
+  /* z-index: ; */
+}
+
+.sola_detail {
+  display: flex;
+  align-items: center;
+}
+
+.sola .left {
+  width: 578rpx;
+  height: 278rpx;
+  padding: 50rpx 0rpx 0 45rpx;
+  z-index: 10;
+}
+
+.sola .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+}
+
+.sola .sola_name {
+  color: #fff;
+  font-size: 50rpx;
+  margin-top: 20rpx;
+}
+
+.sola .time {
+  color: #fff;
+  font-size: 20rpx;
+  margin-top: 25rpx;
+}
+
+.sola .right {
+  color: #fff;
+  width: 50rpx;
+  z-index: 10;
+}
+
+.sola .wire {
+  height: 245rpx;
+  width: 30rpx;
+  border-left: 1rpx dotted #fff;
+  margin-left: 20rpx;
+  z-index: 10;
+}
+
+.notice {
+  text-align: center;
+  padding: 20rpx 0;
+  color: #ff2d2d;
+}
+
+/* 单张end */
+
+/* 多张start */
+
+.slider {
+  height: 230rpx;
+  margin-bottom: 20rpx;
+}
+
+.more {
+  padding: 0 0 0 26rpx;
+  position: relative;
+}
+
+.more image {
+  width: 532rpx;
+  height: 225rpx;
+  position: absolute;
+  z-index: -3;
+}
+
+.more_detail {
+  display: flex;
+  align-items: center;
+}
+
+.more .left {
+  width: 430rpx;
+  height: 225rpx;
+  padding: 30rpx 0rpx 0 35rpx;
+}
+
+.more .top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-size: 26rpx;
+}
+
+.more .more_name {
+  color: #fff;
+  font-size: 45rpx;
+  margin-top: 20rpx;
+}
+
+.more .time {
+  color: #fff;
+  font-size: 15rpx;
+  margin-top: 25rpx;
+}
+
+.more .right {
+  color: #fff;
+  width: 50rpx;
+}
+
+.more .wire {
+  height: 178rpx;
+  width: 30rpx;
+  border-left: 1rpx dotted #fff;
+  margin-left: 20rpx;
+}
+
+/* 多张end */
+
+/* 地图 */
+
+.location {
+  padding: 26rpx;
+  background-color: #fff;
+}
+
+.loc_text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 26rpx;
+}
+
+.copy {
+  font-size: 22rpx;
+  border: 1rpx solid #888;
+  padding: 6rpx 12rpx;
+  border-radius: 5rpx;
+}
+
+.location #map {
+  border-radius: 25rpx;
+}
+
+.nogoods {
+  text-align: center;
+  padding-bottom: 40rpx;
+}

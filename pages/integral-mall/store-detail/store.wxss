@@ -1,0 +1,101 @@
+.store_top {
+  height: 200rpx;
+  position: relative;
+}
+
+.store_top .bg {
+  position: absolute;
+  z-index: -3;
+  width: 100%;
+  height: 100%;
+}
+
+.store_abstract {
+  padding: 0 18rpx;
+  background-color: #fff;
+}
+
+.describe {
+  margin: 20rpx;
+  color: #999;
+  height: 40rpx;
+  overflow: hidden;
+}
+
+.showWord {
+  margin: 20rpx;
+  color: #999;
+}
+
+.store_logo {
+  position: absolute;
+  width: 180rpx;
+  height: 180rpx;
+  top: 212rpx;
+}
+
+.store_name {
+  padding: 20rpx 0 0 20rpx;
+  font-size: 30rpx;
+}
+
+/* 商品列表样式 */
+
+.goods_content {
+}
+
+.clearfix {
+  display: block;
+  content: '';
+  clear: both;
+  overflow: hidden;
+}
+
+.goods_list {
+  float: left;
+  margin-left: 26rpx;
+  margin-top: 30rpx;
+}
+
+.goods_list image {
+  display: block;
+  border-top-right-radius: 25rpx;
+  border-top-left-radius: 25rpx;
+  margin: 0;
+  padding: 0;
+}
+
+.goods_bottom {
+  width: 335rpx;
+  background-color: #fff;
+  padding: 15rpx 0 15rpx 25rpx;
+}
+
+.goods_name {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-bottom: 15rpx;
+}
+
+.isW {
+  color: #ff3535;
+}
+
+/* 商品为空时 */
+
+.nangoods {
+  padding-top: 100rpx;
+  text-align: center;
+}
+
+.check {
+  text-align: center;
+  padding: 20rpx 0;
+}
+
+.check image {
+  width: 15rpx;
+  height: 15rpx;
+}

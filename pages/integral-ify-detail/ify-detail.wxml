@@ -1,0 +1,91 @@
+<view style='background:#fff;'>
+  <view class='header'>
+    <image src='{{store_detail.header_bg}}'></image>
+  </view>
+  <view class='introduce'>
+    <!-- <view class='logo'>
+      <image src='{{store_detail.logo}}'></image>
+    </view> -->
+    <view class='store_name'>{{store_detail.name}}</view>
+    <view class='intro'>
+      <view class="{{word ? 'showWord' : 'describe'}}" id='gain'>{{store_detail.intro}}</view>
+    </view>
+    <view class='check' bindtap='check_word' wx:if="{{store.intro != ''}}">
+      <text style='color:#999' wx:if='{{!word}}'>查看更多</text>
+      <text wx:else style='color:#999'>收起</text>
+      <!-- <image src='/images/right.png'></image> -->
+    </view>
+    <view wx:else class='showWord' style='padding-bottom:20rpx;'>
+      暂无简介
+    </view>
+  </view>
+  <view class='cart'>
+    <view class='sola' wx:if="{{cart_list.length == 1}}">
+      <view class='sola_detail'>
+        <image src='/images/cart_bg.png'></image>
+        <view class='left' bindtap='convert' data-id='{{cart_list[0].id}}'>
+          <view class='top'>
+            <view>{{cart_list[0].integral}}积分兑换</view>
+            <view>剩余：{{cart_list[0].goods_num}}张</view>
+          </view>
+          <view class='sola_name'>
+            {{cart_list[0].name}}
+          </view>
+          <view class='time'>
+            有效期：{{cart_list[0].start_time}}至{{cart_list[0].end_time}}
+          </view>
+          <view>
+          </view>
+        </view>
+        <view class='wire'></view>
+        <view class='right' bindtap='convert' data-id='{{cart_list[0].id}}'>
+          立即兑换
+        </view>
+      </view>
+    </view>
+    <view wx:elif="{{cart_list.length > 1}}">
+      <swiper autoplay="{{false}}" circular="{{circular}}" class="slider" duration="300" next-margin="{{nextMargin}}px" indicatorDots="{{false}}" interval="5000">
+        <swiper-item wx:for="{{cart_list}}" style="560rpx!important;height:276rpx!important;">
+          <view class='more'>
+            <view class='more_detail'>
+              <image src='/images/cart_bg.png'></image>
+              <view class='left' bindtap='convert' data-id='{{item.id}}'>
+                <view class='top'>
+                  <view>{{item.integral}}积分兑换</view>
+                  <view>剩余：{{item.goods_num}}张</view>
+                </view>
+                <view class='more_name'>
+                  {{item.name}}
+                </view>
+                <view class='time'>
+                  有效期：{{item.start_time}}至{{item.end_time}}
+                </view>
+                <view>
+                </view>
+              </view>
+              <view class='wire'>
+              </view>
+              <view class='right' bindtap='convert' data-id='{{item.id}}'>
+                立即兑换
+              </view>
+            </view>
+          </view>
+        </swiper-item>
+      </swiper>
+    </view>
+    <view wx:else class='nogoods'>
+      暂时没有商品
+    </view>
+  </view>
+  <!-- <view class='notice'>使用须知
+    <image style='width:23rpx;height:21rpx;' src='/images/notice-right.png'></image>
+  </view> -->
+  <view class='location'>
+    <view class='loc_text'>
+      <view style='font-size:24rpx;'>地址：{{store_detail.address}}</view>
+      <view class='copy' bindtap='copyText' data-text="{{store_detail.address}}">复制</view>
+    </view>
+    <map id="map" longitude="{{store_detail.longitude}}" latitude="{{store_detail.latitude}}" scale="14" controls="{{controls}}" bindcontroltap="controltap" markers="{{markers}}" bindmarkertap="markertap" polyline="{{polyline}}" bindregionchange="regionchange"
+      show-location style="width: 100%; height: 353rpx;"></map>
+  </view>
+</view>

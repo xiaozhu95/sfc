@@ -1,0 +1,42 @@
+<view>
+  <view class='code'>
+    <image src='/images/cart_bg.png'></image>
+    <view class='code_main'>
+      <view class='main_top'>
+        <view>{{coupon_detail.integral}}积分兑换</view>
+        <view>剩余{{coupon_detail.goods_num}}张</view>
+      </view>
+      <view class='main_name'>
+        {{coupon_detail.name}}
+      </view>
+      <view class='time'>
+        {{coupon_detail.start_time}}至{{coupon_detail.end_time}}
+      </view>
+    </view>
+  </view>
+  <view class='content'>
+    <view class='content_name'>
+      <view>姓名</view>
+      <view>{{user_name}}</view>
+    </view>
+    <view class='content_num'>
+      <view>数量</view>
+      <view class='content_bit'>
+        <view class='reduce' bindtap='reduce'>
+          <image style='width:100%;height:100%;' src='/images/reduce.png'></image>
+        </view>
+        <view style='padding:0 20rpx;'>{{num}}</view>
+        <view class='add' bindtap='add'>
+          <image style='width:100%;height:100%;' src='/images/add.png'></image>
+        </view>
+      </view>
+    </view>
+    <view class='content_integral'>
+      <view>支付积分</view>
+      <view class='integral'>{{coupon_detail.integral}}积分</view>
+    </view>
+  </view>
+  <view class='submit' bindtap='ordersumbit'>
+    确认支付
+  </view>
+</view>

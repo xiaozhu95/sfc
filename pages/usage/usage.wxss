@@ -1,0 +1,102 @@
+.usage {
+  padding: 0 26rpx;
+}
+
+.code {
+  padding-top: 26rpx;
+  padding-bottom: 20rpx;
+  height: 336rpx;
+  position: relative;
+}
+
+.code_img {
+  position: absolute;
+  width: 100%;
+  height: 286rpx;
+  z-index: -1;
+}
+
+.code_content {
+  color: #fff;
+  padding: 40rpx 46rpx;
+}
+
+.content_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.content_det {
+  font-size: 50rpx;
+  padding: 30rpx 0;
+  width: 606rpx;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.usename {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 20rpx 26rpx;
+  margin-bottom: 20rpx;
+}
+
+.store {
+  background-color: #fff;
+  margin-top: 25rpx;
+  padding: 0 26rpx;
+}
+
+.picture {
+  display: flex;
+  align-items: center;
+  padding: 20rpx 0;
+}
+
+.picture image {
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.rule {
+  padding: 25rpx 0;
+  font-size: 40rpx;
+  font-weight: 10;
+}
+
+.coupon {
+  /* height: 225px;
+  width: 225px; */
+  background: #fff;
+  text-align: center;
+}
+
+.coupon image {
+  width: 450rpx;
+  height: 450rpx;
+  display: block;
+  margin: 0 auto;
+}
+
+.usage_name {
+  /* padding: 0 20rpx; */
+}
+
+.copy_location {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24rpx;
+  padding-bottom: 20rpx;
+}
+
+.is_copy {
+  font-size: 22rpx;
+  padding: 6rpx 12rpx;
+  border: 1rpx solid #888;
+  border-radius: 5rpx;
+}

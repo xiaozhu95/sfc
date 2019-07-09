@@ -1,0 +1,26 @@
+<view class='box'>
+  <view class='header'>
+    <view wx:if="{{!toorder}}" class='orderfaild'>支付失败</view>
+    <view wx:else class='orderfaild'>支付成功</view>
+    <view class='header_bottom'>
+      <view class='header_item' bindtap='toclass'>继续购买</view>
+      <view class='header_item' bindtap='topay'>订单中心</view>
+    </view>
+  </view>
+  <view class='bottm_content'>
+    <view class="goods-list flex-row goods-list-cols-3">
+      <view class="flex-grow-0" wx:for="{{goods_list}}" wx:for-index="goods_index" wx:for-item="goods">
+        <navigator class="goods-item" url="/pages/goods/goods?id={{goods.id}}">
+          <image mode="aspectFill" src="{{goods.cover_pic}}"></image>
+          <text class="text-more-2 {{cat_goods_cols==3?'fs-sm':''}}" style="padding:0 20rpx;height:2.8em;line-height:1.4;">{{goods.name}}</text>
+          <text class="goods-price">￥{{goods.price}}</text>
+          <text class="goods-price" wx:if="{{cat_goods_cols==3}}">￥{{goods.price}}</text>
+          <view class="flex-row" style="padding:10rpx 20rpx" wx:if="{{cat_goods_cols==2}}">
+            <view class="flex-grow-1" style="color:#ff334b">￥{{goods.price}}</view>
+            <view class="fs-sm" style="color:#999;">已售{{goods.sales}}</view>
+          </view>
+        </navigator>
+      </view>
+    </view>
+  </view>
+</view>

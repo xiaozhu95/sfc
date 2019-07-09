@@ -1,0 +1,91 @@
+<view class="top-bar flex-row">
+  <navigator class="flex-grow-1 {{status==0?'active':''}}" openType="redirect" url="/pages/coupon/coupon?status=0">
+    <text>未使用</text>
+  </navigator>
+  <navigator class="flex-grow-1 {{status==1?'active':''}}" openType="redirect" url="/pages/coupon/coupon?status=1">
+    <text>已使用</text>
+  </navigator>
+  <navigator class="flex-grow-1 {{status==2?'active':''}}" openType="redirect" url="/pages/coupon/coupon?status=2">
+    <text>已过期</text>
+  </navigator>
+</view>
+<view class="coupon-list" wx:if="{{list&&list.length>0}}">
+  <block wx:for="{{list}}" wx:for-item="coupon">
+    <view class='coupon_detail'>
+      <image style='width:682rpx;height:160rpx;' src='/images/icon-coupon-enabled.png'></image>
+      <view class='detail_top'>
+        <view class='detail_row'>
+          <view wx:if='{{coupon.discount_type != 1}}'>￥
+            <text style="font-size: {{coupon.sub_price.length>4?'13':'19'}}pt;line-height: .9">{{coupon.sub_price}}</text>
+          </view>
+          <view wx:else>
+            <text style="font-size: {{coupon.sub_price.length>4?'13':'19'}}pt;line-height: .9">{{coupon.discount}}</text> 折
+          </view>
+          <view wx:if='{{coupon.status == 1}}' class='used'>已经使用</view>
+          <view wx:elif='{{coupon.status == 2}}' class='employ'>已经过期</view>
+          <view wx:else class='employ' bindtap="goodsList" data-goods_id="{{coupon.goods_id_list}}" data-mc_id='{{coupon.mch_id}}'>立即使用</view>
+        </view>
+      </view>
+      <view class='detail_bottom'>
+        <view>
+          <view class='coupon_time'>
+            有效期至：{{coupon.end_time}}
+          </view>
+          <view>
+            适用产品：
+            <text wx:if='{{coupon.goods != null}}'>{{coupon.goods}}</text>（{{coupon.min_price_desc}}）
+          </view>
+        </view>
+      </view>
+    </view>
+    <!-- <view class="coupon-item coupon-status-{{coupon.status}}" style="margin-top:20rpx;">
+      <image class="coupon-bg" src="/images/img-coupon-bg-{{coupon.status==0?0:1}}.png"></image>
+      <image class="coupon-status-icon" src="/images/img-coupon-status-icon-{{coupon.status}}.png" wx:if="{{coupon.status!=0}}"></image>
+      <view class="flex-row" style="height: 100%;overflow: hidden">
+        <view class="flex-grow-0 flex-col flex-y-center flex-x-center coupon-left">
+          <view class="flex-row flex-y-bottom">
+            <view style="font-size: 9pt">￥</view>
+            <view style="font-size: {{coupon.sub_price.length>4?'13':'19'}}pt;line-height: .9">
+              {{coupon.sub_price}}
+            </view>
+          </view>
+          <view style="font-size: 8pt;margin-top: 10rpx">{{coupon.min_price_desc}}</view>
+        </view>
+        <view class="flex-grow-1 flex-y-center coupon-right">
+          <view style="width:100%;">
+            <view class="flex-row flex-y-center mb-10" style="margin-bottom:5rpx;">
+              <view class="flex-grow-1" style="font-size: 12pt;">{{coupon.event_desc}}</view>
+            </view>
+            <view style="font-size: 8pt;color: #666666">{{coupon.begin_time}} ~ {{coupon.end_time}}</view>
+            <view class='presented'>
+              <view bindtap="goodsList" class="user_coupon_font" data-goods_id="{{coupon.goods}}" data-mc_id='{{coupon.mch_id}}' style="height:50rpx;" wx:if="{{coupon.appoint_type==2&&coupon.goods.length>0}}">立即使用</view>
+              <view>赠送</view>
+            </view>
+            <text class="user_coupon_font" wx:if="{{coupon.appoint_type==1&&coupon.cat.length==0}}">全场通用</text>
+            <text class="user_coupon_font" wx:if="{{coupon.appoint_type==2&&coupon.goods.length==0}}">全场通用</text>
+            <text class="user_coupon_font" wx:if="{{coupon.appoint_type==null}}">全场通用</text>
+            <block wx:if="{{coupon.appoint_type==1&&coupon.cat.length>0}}">
+              <view class="user_coupon_font" style="overflow: hidden; white-space: nowrap; text-overflow: ellipsis;width:87%;">
+                仅限
+                <text wx:for="{{coupon.cat}}" wx:for-item="cat" wx:key="id">{{cat.name}}、</text>产品使用
+              </view>
+              <block wx:if="{{coupon.cat.length>2}}">
+                <image bindtap="xia" class="xia" data-index="{{index}}" src="/images/user-coupon-xia.png" wx:if="{{index!=check}}"></image>
+                <image bindtap="shou" class="xia" data-index="{{index}}" src="/images/shou.png" wx:if="{{index==check}}"></image>
+              </block>
+            </block>
+            <view bindtap="goodsList" class="user_coupon_font" data-goods_id="{{coupon.goods}}" style="height:50rpx;" wx:if="{{coupon.appoint_type==2&&coupon.goods.length>0}}">指定商品使用 点进去查看指定商品</view>
+            <view style="font-size: 8pt;color: #666666">{{coupon.begin_time}} ~ {{coupon.end_time}}</view>
+          </view>
+        </view>
+      </view>
+    </view> -->
+    <block wx:if="{{coupon.cat.length>2}}">
+      <view class="user_coupon" style="padding:10rpx 24rpx;background:#fff;" wx:if="{{check==index}}">
+        仅限
+        <text wx:for="{{coupon.cat}}" wx:for-item="cat" wx:key="id">{{cat.name}}、</text>产品使用
+      </view>
+    </block>
+  </block>
+</view>
+<view style="padding-top: 200rpx;color: #888;text-align: center" wx:else>暂无相关优惠券</view>

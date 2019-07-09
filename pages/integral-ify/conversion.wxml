@@ -1,0 +1,8 @@
+<view class='box'>
+  <view class='store' wx:for="{{store_list}}" wx:for-index='index' data-index='{{index}}' data-id='{{item.id}}' bindtap='todetail'>
+    <image src='{{item.header_bg}}'></image>
+  </view>
+  <view class='empty' wx:if="{{store_list.length == 0}}">
+    暂时没有商家
+  </view>
+</view>

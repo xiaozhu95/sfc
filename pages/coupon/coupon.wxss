@@ -1,0 +1,144 @@
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: #fff;
+  border-top: 1rpx solid #e3e3e3;
+  border-bottom: 1rpx solid #e3e3e3;
+  z-index: 999;
+}
+
+.top-bar navigator {
+  text-align: center;
+}
+
+.top-bar navigator text {
+  height: 90rpx;
+  line-height: 90rpx;
+  border-bottom: 2rpx solid transparent;
+  width: auto;
+  display: inline-block;
+}
+
+.top-bar navigator.active text {
+  color: #ff4544;
+  border-bottom-color: #ff4544;
+}
+
+.coupon-list {
+  padding: 122rpx 34rpx 20rpx 34rpx;
+}
+
+.coupon-list .coupon-item {
+  height: 152rpx;
+  width: 682rpx;
+  position: relative;
+}
+
+.coupon-list .coupon-item.coupon-status-1 .coupon-right,
+.coupon-list .coupon-item.coupon-status-2 .coupon-right {
+  color: rgba(0, 0, 0, 0.35) !important;
+}
+
+.coupon-list .coupon-item .coupon-bg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.coupon-list .coupon-item .coupon-status-icon {
+  width: 140rpx;
+  height: 98rpx;
+  position: absolute;
+  top: 0;
+  right: 8rpx;
+  z-index: 1;
+}
+
+.coupon-list .coupon-item .coupon-left {
+  color: #fff;
+  width: 202rpx;
+}
+
+.coupon-list .coupon-item .coupon-right {
+  padding: 20rpx 10rpx;
+}
+
+.user_coupon_font {
+  font-size: 8pt;
+  color: #666;
+  margin-top: 10rpx;
+}
+
+.user_coupon {
+  font-size: 8pt;
+  color: #666;
+}
+
+.xia {
+  position: absolute;
+  width: 28rpx;
+  height: 28rpx;
+  right: 15px;
+  bottom: 9px;
+}
+
+.presented {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* 卡券样式 */
+
+.coupon_detail {
+  position: relative;
+  background-color: #fff;
+  border-radius: 20rpx;
+   margin-bottom: 25rpx;
+}
+
+.detail_top {
+  position: absolute;
+  width: 682rpx;
+  padding: 0 40rpx;
+  top: 40rpx;
+  color: #fff;
+}
+
+.detail_row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.employ {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #f58e29;
+  background-color: #fff;
+  border-radius: 50rpx;
+}
+
+.used {
+  width: 160rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  text-align: center;
+  color: #fff;
+  background-color: #888;
+  border-radius: 50rpx;
+}
+
+.detail_bottom {
+  padding: 20rpx 40rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="container_bg">
+    <view class="sender">
+      <view class="senderName flex_bt">
+        <text>头像</text>
+        <view>
+          <image class="content-top-img" src="{{user_info.avatar_url}}"></image>
+        </view>
+      </view>
+      <view class="senderStaticDiv flex_bt">
+        <text>昵称</text>
+        <input class="content-top-name" value="{{user_info.nickname}}" bindinput="senderName" type="text" name="input"></input>
+      </view>
+      <!-- <view class="senderStaticDiv selectAdd flex_bt">
+        <text>姓名</text>
+        <input type='text' bindinput="sendernamess" name="input" placeholder="请在此处输入姓名" value="{{sendernamess}}" />
+      </view> -->
+      <view class="senderStaticDiv selectAdd flex_bt">
+        <text>手机号码</text>
+        <input type='text' bindinput="senderPhone" name="input" placeholder="请在此处输入您的手机号" value='{{call}}' />
+      </view>
+    </view>
+  </view>
+  <view class="address_btn">
+    <!-- <button class="btn_color" bindtap="saveBtn">保存</button> -->
+  </view>
+</view>

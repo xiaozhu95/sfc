@@ -1,0 +1,29 @@
+<view class='register'>
+  <image class='bg_img' src='/images/register_bg.jpg'></image>
+  <view class='main'>
+    <image class='bg' src="/images/bgresg.png"></image>
+    <image class='aircle' src='/images/ciecle02.png'></image>
+    <view class='main_text'>
+      <view style='width:150rpx;height:150rpx;'>
+        <image style='width:150rpx;height:100%;' src='/images/circle.png'></image>
+      </view>
+      <view class='remark' >百联异构同时注册 凭此账号上百联商城可获取大量优惠</view>
+    </view>
+    <view class='isInput'>
+      <view class='phone' style=' margin-top: 20rpx;'>
+        <image src='/images/account.png'></image>
+        <input placeholder='请输入您的手机号' maxlength="11" bindinput='getphone'></input>
+      </view>
+      <view class='code' style=' margin-top: 65rpx;'>
+        <image src='/images/code.png'></image>
+        <input placeholder='请输入验证码' bindinput='getsmg'></input>
+        <view class='code_text' wx:if="{{codecontent == '获取验证码'}}" bindtap='getCode'>{{codecontent}}</view>
+        <view class='code_text' wx:elif="{{codecontent == '重新发送'}}" bindtap='getCode'>{{codecontent}}</view>
+        <view class='code_text' wx:else>{{codecontent}}</view>
+      </view>
+    </view>
+    <view class='isButton' bindtap='register'>
+      <button>注册</button>
+    </view>
+  </view>
+</view>
